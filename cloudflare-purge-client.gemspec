@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "cloudflare-purge-client"
   spec.version = Cloudflare::Purge::Client::VERSION
   spec.authors = ["ryo.naruse"]
-  spec.email = ["13917558+ryy@users.noreply.github.com"]
+  spec.email = ["naruse19910801@gmail.com"]
 
   spec.summary = "Cloudflare purge client"
   spec.description = "This gem that only provides cloudflare purge."
