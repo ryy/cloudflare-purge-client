@@ -41,7 +41,8 @@ client.purge_all_file
 
 Granularly remove one or more files from Cloudflare's cache either by specifying URLs.
 ```ruby
-client.purge_file_by_url(files: ["https://your-domain.com", "https://your-domain.com/a", "https://your-domain.com/b"])
+files = ["https://your-domain.com", "https://your-domain.com/a", "https://your-domain.com/b"]
+client.purge_file_by_url(files: files)
 ```
 
 ## Development
