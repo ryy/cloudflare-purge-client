@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "lib/cloudflare/purge/client/version"
-
 Gem::Specification.new do |spec|
   spec.name = "cloudflare-purge-client"
-  spec.version = Cloudflare::Purge::Client::VERSION
+  spec.version = '0.10'
   spec.authors = ["ryo.naruse"]
   spec.email = ["13917558+ryy@users.noreply.github.com"]
 
