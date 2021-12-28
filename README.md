@@ -1,8 +1,6 @@
-# Cloudflare::Purge::Client
+# Cloudflare Purge Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cloudflare/purge/client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby gem is an API wrapped version of purging the Cloudflare cache. For more information, please refer to the API documentation.
 
 ## Installation
 
@@ -20,9 +18,31 @@ Or install it yourself as:
 
     $ gem install cloudflare-purge-client
 
-## Usage
 
-TODO: Write usage instructions here
+## Configuration
+Configuration is done through a block returning an instance of Cloudflare::Purge::Client. The block is mandatory and if not passed, an ArgumentError will be thrown.
+
+```ruby
+client = Cloudflare::Purge::Client.new do |config|
+  config.zone_id = "your cloudflare zone_id"
+  config.email = "your.cloudflare.email@example.com"
+  config.auth_key = "your cloudflare auth_key"
+end
+```
+
+## Usage
+The result of configuration is an instance of loudflare::Purge::Client.
+
+Remove ALL files from Cloudflare's cache.
+```ruby
+# It's so simple!
+client.purge_all_file
+```
+
+Granularly remove one or more files from Cloudflare's cache either by specifying URLs.
+```ruby
+client.purge_file_by_url(files: ["https://your-domain.com", "https://your-domain.com/a", "https://your-domain.com/b"])
+```
 
 ## Development
 
