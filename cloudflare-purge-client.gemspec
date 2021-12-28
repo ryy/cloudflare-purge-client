@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "cloudflare-purge-client"
-  spec.version = '0.10'
+  spec.version = '1.0.0'
   spec.authors = ["ryo.naruse"]
   spec.email = ["13917558+ryy@users.noreply.github.com"]
 
