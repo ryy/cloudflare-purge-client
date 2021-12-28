@@ -5,6 +5,7 @@ require "json"
 require 'cloudflare/purge/api_version'
 require 'cloudflare/purge/configuration'
 require 'cloudflare/purge/purge_all_file'
+require 'cloudflare/purge/purge_file_by_url'
 
 module Cloudflare
   module Purge
