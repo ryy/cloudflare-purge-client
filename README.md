@@ -20,7 +20,7 @@ Or install it yourself as:
 
 
 ## Configuration
-Configuration is done through a block returning an instance of Cloudflare::Purge::Client. The block is mandatory and if not passed, an ArgumentError will be thrown.
+Configuration is done through a block returning an instance of `Cloudflare::Purge::Client`. The block is mandatory and if not passed, an `ArgumentError` will be thrown.
 
 ```ruby
 client = Cloudflare::Purge::Client.new do |config|
@@ -31,7 +31,7 @@ end
 ```
 
 ## Usage
-The result of configuration is an instance of loudflare::Purge::Client.
+The result of configuration is an instance of `Cloudflare::Purge::Client`.
 
 Remove ALL files from Cloudflare's cache.
 ```ruby
