@@ -1,0 +1,65 @@
+---
+id: 51
+name: ローカルファイル to BigQuery
+description: ''
+user:
+  id: 5
+  email: naruse@primenumber.co.jp
+transfer_option:
+  transfer_type: normal
+  in:
+    type: local_file
+    file_name: sample.jsonl
+    parser:
+      type: jsonl
+      stop_on_invalid_record: true
+      default_timezone: UTC
+      newline: LF
+      charset: UTF-8
+      min_rows_for_guess: 1
+      columns:
+      - name: str
+        type: string
+      - name: num
+        type: long
+    decoders: []
+  out:
+    type: bigquery
+    bigquery_connection:
+      id: 1
+      name: "[QA]bigquery test"
+    dataset: test_by_naruse
+    table: sample_table
+    auto_create_dataset: false
+    mode: replace
+    location: US
+    open_timeout_sec: 300
+    timeout_sec: 300
+    send_timeout_sec: 300
+    read_timeout_sec: 300
+    retries: 5
+    allow_quoted_newlines: true
+    column_options: []
+    template_table: ''
+    time_partitioning:
+      type: 
+      field: ''
+      expiration_ms: 
+    custom_variables: []
+  data_settings:
+    columns:
+    - name: str
+      src: str
+      default: ''
+      type: string
+    - name: num
+      src: num
+      default: ''
+      type: long
+  is_runnable_concurrently: false
+  retry_limit: 0
+group: 
+labels: []
+job_schedules: []
+triggers: []
+notifications: []
